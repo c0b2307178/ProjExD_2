@@ -39,14 +39,6 @@ def main():
 
         key_lst = pg.key.get_pressed()
         sum_mv = [0, 0]
-        for key, tpl in DELTA.items():
-            if key_lst[key] == True:
-                sum_mv[0] += tpl[0]
-                sum_mv[1] += tpl[1]
-        kk_rct.move_ip(sum_mv)
-        screen.blit(kk_img, kk_rct)
-        bb_rct.move_ip(vx, vy)  # 爆弾動く      
-        screen.blit(bb_img, bb_rct)
         pg.display.update()
         tmr += 1
         clock.tick(50)
